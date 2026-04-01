@@ -246,40 +246,56 @@ ul {
 .review {
     display: flex;
     justify-content: center;
-    /* centers horizontally */
-    align-items: center;
     flex-wrap: wrap;
-    /* allows wrapping */
+    gap: 30px;
     width: 90%;
-    padding: 40px;
-    gap: 40px;
     margin: 50px auto;
-    /* ✅ THIS centers the whole section */
 }
 
 .review-person {
+    background: #deacff7c;
     border-radius: 20px;
-    background-color: #deacff7c;
-    padding: 20px;
+    padding: 25px;
     width: 300px;
-    /* ✅ gives consistent size */
+    transition: 0.3s ease;
 }
 
-.review-person img {
-    width: 40px;
-    border-radius: 80px;
+.review-person:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.stars {
+    color: #ffb400;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
 }
 
 .review-person p {
-    font-size: 16x;
-    font-weight: bold;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
 .review-name {
-    margin-top: 20px;
     display: flex;
-    gap: 10px;
     align-items: center;
+    gap: 10px;
+}
+
+.review-name img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.review-name h4 {
+    font-size: 1rem;
+}
+
+.review-name span {
+    font-size: 0.8rem;
+    color: gray;
 }
 
 .contact-container {
@@ -509,7 +525,6 @@ ul {
 
     .nav-links {
         display: none !important;
-        /* ✅ FORCE hide */
         position: absolute;
         top: 100%;
         left: 0;
@@ -523,7 +538,6 @@ ul {
 
     .nav-links.active {
         display: flex !important;
-        /* ✅ show when clicked */
     }
 
     .navbar {
